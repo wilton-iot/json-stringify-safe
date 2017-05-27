@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var Sinon = require("sinon")
 var stringify = require("..")
 function jsonify(obj) { return JSON.stringify(obj, null, 2) }
@@ -244,3 +245,5 @@ describe("Stringify", function() {
 function bangString(key, value) {
   return typeof value == "string" ? value + "!" : value
 }
+
+return module.exports;});

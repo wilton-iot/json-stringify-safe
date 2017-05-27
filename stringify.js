@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 exports = module.exports = stringify
 exports.getSerialize = serializer
 
@@ -25,3 +26,5 @@ function serializer(replacer, cycleReplacer) {
     return replacer == null ? value : replacer.call(this, key, value)
   }
 }
+
+return module.exports;});
