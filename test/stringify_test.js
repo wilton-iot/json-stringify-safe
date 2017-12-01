@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var Sinon = require("sinon")
 var stringify = require("..")
 function jsonify(obj) { return JSON.stringify(obj, null, 2) }
@@ -246,4 +246,4 @@ function bangString(key, value) {
   return typeof value == "string" ? value + "!" : value
 }
 
-return module.exports;});
+require = requireOrig;});
